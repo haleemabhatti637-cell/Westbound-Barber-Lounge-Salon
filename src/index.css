@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Oswald', 'Montserrat', sans-serif;
+    --font-vintage: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+.font-heading {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+}
+
+.font-vintage {
+  font-family: 'Cinzel', serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+.neon-glow-red {
+  box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.5);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 20px rgba(220, 38, 38, 0.7);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+}
+
+.gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+}
+
+.crimson-gradient {
+  background: linear-gradient(135deg, #EF4444 0%, #DC2626 60%, #991B1B 100%);
+}
+
+.crimson-gradient-hover:hover {
+  background: linear-gradient(135deg, #F87171 0%, #EF4444 60%, #B91C1C 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+

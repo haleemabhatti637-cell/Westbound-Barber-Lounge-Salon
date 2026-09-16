@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Westbound Barber Lounge & Salon | Stockbridge, GA</title>
+  <meta name="description" content="Stockbridge’s premier barbershop & salon. Under new ownership—accepting new clients, walk-ins, and late appointments." />
+  
+  <!-- Google Fonts: Oswald, Cinzel, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Standalone Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#121212',
+              charcoal: '#1A1A1A',
+              crimson: '#DC2626',
+              gold: '#D97706',
+              surface: '#1E1E1E',
+              border: '#2B2B2B',
+            }
+          },
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            vintage: ['Cinzel', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+    }
+    .font-heading { font-family: 'Oswald', sans-serif; }
+    .font-vintage { font-family: 'Cinzel', serif; }
+    
+    .gold-gradient {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+    }
+    .gold-gradient:hover {
+      background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 50%, #D97706 100%);
+    }
+    .crimson-gradient {
+      background: linear-gradient(135deg, #EF4444 0%, #DC2626 60%, #991B1B 100%);
+    }
+    .crimson-gradient:hover {
+      background: linear-gradient(135deg, #F87171 0%, #EF4444 60%, #B91C1C 100%);
+    }
+    .text-glow-red {
+      text-shadow: 0 0 20px rgba(220, 38, 38, 0.7);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#121212] text-white selection:bg-[#DC2626] selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-[#0D0D0D] border-b border-[#242424] text-xs py-1.5 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3 text-neutral-300">
+        <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Open Today: 9:00 AM – 6:00 PM
+        </span>
+        <span class="text-neutral-600 hidden sm:inline">•</span>
+        <span class="hidden sm:inline">4340 N Henry Blvd, Suite 240, Stockbridge, GA</span>
+        <span class="text-neutral-600 hidden md:inline">•</span>
+        <span class="text-[#D97706] font-medium hidden md:inline">✂️ Walk-Ins Welcomed Daily</span>
+      </div>
+      <div class="flex items-center gap-4 ml-auto">
+        <a href="tel:6785652887" class="text-white hover:text-[#D97706] font-semibold flex items-center gap-1">
+          <span>Call: (678) 565-2887</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-[#121212]/95 backdrop-blur-md border-b border-[#262626] py-3.5 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Recommended Trust Badged (as seen in screenshot) -->
+      <div class="hidden lg:flex items-center gap-2.5 bg-[#171717] border border-emerald-500/30 px-3 py-1.5 rounded-lg shadow-sm">
+        <div class="w-6 h-6 rounded bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </div>
+        <div class="text-left leading-none">
+          <span class="text-[9px] uppercase font-bold text-emerald-400 tracking-wider block">Recommended</span>
+          <span class="text-xs font-bold text-white tracking-wide block">Trust Badged</span>
+          <span class="text-[10px] text-amber-400 font-bold block mt-0.5">★★★★★</span>
+        </div>
+      </div>
+
+      <!-- Brand Logo: Vintage Clipper & Razor Emblem -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="relative w-12 h-12 rounded-full p-[2px] bg-gradient-to-tr from-[#DC2626] via-[#D97706] to-[#EF4444] shadow-[0_0_15px_rgba(220,38,38,0.5)]">
+          <div class="w-full h-full rounded-full bg-[#141414] flex items-center justify-center relative overflow-hidden">
+            <svg viewBox="0 0 100 100" class="w-full h-full text-[#D97706] p-1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="44" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.8" />
+              <circle cx="50" cy="50" r="39" stroke="#D97706" stroke-width="1" opacity="0.9" />
+              <path d="M32 75 L68 25 M68 25 L73 30 L37 80" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="33" cy="77" r="5" stroke="#FFFFFF" stroke-width="2" />
+              <path d="M68 75 L32 25 M32 25 L27 30 L63 80" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+              <circle cx="67" cy="77" r="5" stroke="#FFFFFF" stroke-width="2" />
+              <circle cx="50" cy="50" r="3.5" fill="#DC2626" stroke="#FFFFFF" stroke-width="1.5" />
+              <path d="M36 34 L43 54 L50 38 L57 54 L64 34" stroke="#D97706" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex flex-col text-left">
+          <div class="flex items-center gap-1">
+            <span class="font-heading text-lg sm:text-xl font-bold tracking-wider text-white uppercase leading-none">
+              WESTBOUND
+            </span>
+            <span class="text-[9px] uppercase font-bold tracking-widest px-1 py-0.5 rounded bg-[#DC2626]/20 text-[#EF4444] border border-[#DC2626]/40">
+              GA
+            </span>
+          </div>
+          <span class="text-[10px] font-semibold tracking-[0.2em] text-[#D97706] uppercase mt-0.5">
+            BARBER LOUNGE & SALON
+          </span>
+        </div>
+      </a>
+
+      <!-- Nav links -->
+      <nav class="hidden xl:flex items-center gap-6">
+        <a href="#about" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">About</a>
+        <a href="#services" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">Barber Services</a>
+        <a href="#services" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">Pricing</a>
+        <a href="#experience" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">Amenities</a>
+        <a href="#location" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">Location</a>
+        <a href="#location" class="text-xs font-semibold uppercase tracking-wider text-neutral-300 hover:text-white pb-1 border-b-2 border-transparent hover:border-[#DC2626] transition-all">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <button onclick="openBookingModal()" class="gold-gradient text-[#121212] font-heading font-bold text-xs sm:text-sm uppercase tracking-wider px-4 sm:px-5 py-2 sm:py-2.5 rounded shadow-lg shadow-[#D97706]/20 transition-transform active:scale-95">
+          Book Appointment
+        </button>
+        <button onclick="toggleMobileMenu()" class="xl:hidden p-2 text-neutral-300 hover:text-white bg-[#1E1E1E] rounded">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden xl:hidden bg-[#181818] border-t border-[#2A2A2A] px-4 py-4 mt-3 space-y-3 text-sm">
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-neutral-200 uppercase font-semibold py-1">About Us</a>
+      <a href="#services" onclick="toggleMobileMenu()" class="block text-neutral-200 uppercase font-semibold py-1">Barber Services & Pricing</a>
+      <a href="#experience" onclick="toggleMobileMenu()" class="block text-neutral-200 uppercase font-semibold py-1">Lounge Amenities</a>
+      <a href="#portfolio" onclick="toggleMobileMenu()" class="block text-neutral-200 uppercase font-semibold py-1">Precision Cuts Portfolio</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block text-neutral-200 uppercase font-semibold py-1">Location & Hours</a>
+      <div class="pt-2 border-t border-[#262626]">
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full gold-gradient text-[#121212] font-heading font-bold text-sm uppercase py-2.5 rounded text-center">
+          Book Appointment Now
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative bg-[#121212] py-12 lg:py-20 border-b border-[#262626] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <!-- Status Badges -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#DC2626]/20 border border-[#DC2626]/40 text-red-300">
+          ✂️ Walk-Ins Welcomed Daily
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 border border-amber-500/40 text-amber-300">
+          🔥 New Ownership & Renovations
+        </span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[#1C1C1C] border border-neutral-700 text-neutral-300">
+          ⭐ 5.0 Star Rated Master Barbers
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Text details -->
+        <div class="lg:col-span-7">
+          <h2 class="font-heading text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-neutral-300 uppercase mb-1">
+            PRECISION CUTS. VIP LOUNGE VIBES.
+          </h2>
+
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-white mb-2 leading-none">
+            WESTBOUND BARBER <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#DC2626] to-[#D97706] text-glow-red">
+              LOUNGE & SALON
+            </span>
+          </h1>
+
+          <p class="font-heading text-base sm:text-lg font-bold tracking-widest text-[#D97706] uppercase mb-4">
+            MASTER CUTS. BEARD SCULPTS. LUXURY GROOMING.
+          </p>
+
+          <p class="text-neutral-300 text-sm sm:text-base leading-relaxed max-w-2xl mb-5 font-light">
+            Stockbridge’s premier barbershop & salon. Under new ownership—accepting new clients, walk-ins, and late appointments. Experience surgical line-ups, relaxing hot lather steam shaves, and upscale lounge comfort.
+          </p>
+
+          <!-- Highlight amenities line (from screenshot) -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-3 text-xs text-neutral-400 border-y border-[#262626] py-3 mb-8">
+            <span class="text-white font-medium">After-Hours Cuts Available</span>
+            <span class="text-neutral-600">•</span>
+            <span class="text-white font-medium">Experienced Master Barbers</span>
+            <span class="text-neutral-600">•</span>
+            <span class="text-white font-medium">Kids' Cuts</span>
+            <span class="text-neutral-600">•</span>
+            <span class="text-white font-medium">VIP Service</span>
+            <span class="text-neutral-600">•</span>
+            <span class="text-white font-medium">Mobile House Calls</span>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-wrap gap-4 items-center">
+            <button onclick="openBookingModal()" class="gold-gradient text-[#121212] font-heading font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 rounded-lg shadow-xl shadow-amber-900/30">
+              Book Your Cut
+            </button>
+            <a href="#services" class="crimson-gradient text-white font-heading font-bold text-sm sm:text-base uppercase tracking-wider px-6 py-3 rounded-lg shadow-xl shadow-red-950/40 border border-red-500/40">
+              View Services
+            </a>
+          </div>
+        </div>
+
+        <!-- 3-Image Collage (Right side) -->
+        <div class="lg:col-span-5">
+          <div class="bg-[#1A1A1A] border border-[#2F2F2F] rounded-2xl p-3 sm:p-4 shadow-2xl relative">
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-xl overflow-hidden aspect-[4/5] border border-red-600/40">
+                <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Precision Skin Fade" class="w-full h-full object-cover" />
+              </div>
+              <div class="rounded-xl overflow-hidden aspect-[4/5] border border-red-600/40">
+                <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Royal Hot Towel Shave" class="w-full h-full object-cover" />
+              </div>
+              <div class="col-span-2 rounded-xl overflow-hidden aspect-[16/9] border border-amber-600/40">
+                <img src="https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80" alt="Beard Detailing and Fade" class="w-full h-full object-cover" />
+              </div>
+            </div>
+            <div class="mt-3 flex items-center justify-between text-xs text-neutral-400 bg-[#141414] px-3 py-2 rounded-lg border border-[#242424]">
+              <span class="text-white font-medium">Follow our craft:</span>
+              <a href="https://www.instagram.com/westboundbarberloungellc" target="_blank" class="text-amber-400 hover:underline font-bold">
+                @westboundbarberloungellc
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services Strip (Matching screenshot featured banner) -->
+  <section class="py-12 bg-[#161616] border-b border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-8">
+        <h3 class="font-heading text-2xl sm:text-3xl font-extrabold uppercase text-white">
+          Featured Services
+        </h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-white text-neutral-900 rounded-xl p-6 shadow-xl border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-red-600 font-black font-heading text-xl">✂️ FADE</span>
+              <span class="text-2xl font-black font-heading text-[#DC2626]">$35.00</span>
+            </div>
+            <h4 class="font-heading text-lg font-bold uppercase text-neutral-900 mb-1">THE WESTBOUND SIGNATURE FADE</h4>
+            <p class="text-xs text-neutral-600 mb-4 leading-relaxed">Precision low, mid, or high skin fade tailored to your head shape. Includes shear work on top and razor edge cleanup.</p>
+          </div>
+          <button onclick="openBookingModal('westbound-fade')" class="w-full bg-[#121212] hover:bg-[#DC2626] text-white font-heading text-xs font-bold uppercase py-2 rounded transition-colors">
+            Book Cut
+          </button>
+        </div>
+
+        <div class="bg-white text-neutral-900 rounded-xl p-6 shadow-xl border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-red-600 font-black font-heading text-xl">🪒 SHAVE</span>
+              <span class="text-2xl font-black font-heading text-[#DC2626]">$35.00</span>
+            </div>
+            <h4 class="font-heading text-lg font-bold uppercase text-neutral-900 mb-1">THE ROYAL SHAVE</h4>
+            <p class="text-xs text-neutral-600 mb-4 leading-relaxed">Multi-step eucalyptus hot steam towels, rich warm badger-brush lather, straight razor shave, and cooling aloe balm.</p>
+          </div>
+          <button onclick="openBookingModal('royal-shave')" class="w-full bg-[#121212] hover:bg-[#DC2626] text-white font-heading text-xs font-bold uppercase py-2 rounded transition-colors">
+            Book Cut
+          </button>
+        </div>
+
+        <div class="bg-white text-neutral-900 rounded-xl p-6 shadow-xl border border-neutral-200 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <span class="text-red-600 font-black font-heading text-xl">🧒 YOUNG GENT</span>
+              <span class="text-2xl font-black font-heading text-[#DC2626]">$22.00</span>
+            </div>
+            <h4 class="font-heading text-lg font-bold uppercase text-neutral-900 mb-1">KIDS' CUT (12 & UNDER)</h4>
+            <p class="text-xs text-neutral-600 mb-4 leading-relaxed">Patient, gentle, stylish cuts for young boys and teens in an engaging, respectful family-first environment.</p>
+          </div>
+          <button onclick="openBookingModal('kids-cut')" class="w-full bg-[#121212] hover:bg-[#DC2626] text-white font-heading text-xs font-bold uppercase py-2 rounded transition-colors">
+            Book Cut
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming Services Grid (Tabbed Categories) -->
+  <section id="services" class="py-16 bg-[#121212] border-b border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold uppercase text-white mb-3">
+          Master Grooming Services
+        </h2>
+        <p class="text-neutral-400 text-sm">Select a category below to view all offerings, durations, and transparent pricing.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center justify-start md:justify-center overflow-x-auto no-scrollbar gap-2 mb-10 pb-2">
+        <button onclick="filterCategory('all', this)" class="category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#DC2626] text-white">
+          All Services
+        </button>
+        <button onclick="filterCategory('mens-haircuts', this)" class="category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#202020] text-neutral-300 hover:text-white">
+          Men's Haircuts
+        </button>
+        <button onclick="filterCategory('beards-shaves', this)" class="category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#202020] text-neutral-300 hover:text-white">
+          Beard Care & Shaves
+        </button>
+        <button onclick="filterCategory('kids-cuts', this)" class="category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#202020] text-neutral-300 hover:text-white">
+          Kid's Cuts
+        </button>
+        <button onclick="filterCategory('vip-afterhours', this)" class="category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#202020] text-neutral-300 hover:text-white">
+          VIP & After-Hours
+        </button>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="servicesGrid">
+        
+        <!-- Men's Haircuts 1 -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="mens-haircuts">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">The Westbound Signature Fade</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$35.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 45 mins • Includes Razor Finish</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Low, mid, or high skin fade tailored to your head shape. Scissor work on top, foil shaver, and sharp razor cleanup.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-emerald-400 font-medium">✓ Razor Finish Included</span>
+            <button onclick="openBookingModal('The Westbound Signature Fade')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+        <!-- Men's Haircuts 2 -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="mens-haircuts">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">Classic Gentleman's Taper & Cut</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$30.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 40 mins • Shear Blending</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Tailored clipper & shears haircut, neckline razor taper, styled with premium matte pomade and tonic.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-emerald-400 font-medium">✓ Razor Finish Included</span>
+            <button onclick="openBookingModal('Classic Gentleman\'s Taper & Cut')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+        <!-- Beard Care 1 -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="beards-shaves">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">The Royal Hot Towel Shave</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$35.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 40 mins • Old-World Luxury</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Eucalyptus hot steam towels, rich warm lather, straight razor shave, and calming organic aloe recovery.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-emerald-400 font-medium">✓ Razor Finish Included</span>
+            <button onclick="openBookingModal('The Royal Hot Towel Shave')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+        <!-- Beard Care 2 -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="beards-shaves">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">Cut + Beard Sculpt Combo (VIP)</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$55.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 60 mins • Full Master Combo</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Signature fade paired with complete beard sculpting, straight razor detailing on head and face, and hot towel finish.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-emerald-400 font-medium">✓ Razor Finish Included</span>
+            <button onclick="openBookingModal('Cut + Beard Sculpt Combo (VIP)')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+        <!-- Kid's Cuts -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="kids-cuts">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">Young Gentleman's Cut (12 & Under)</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$22.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 30 mins • Gentle & Patient</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Patient, skilled barbers creating confidence-building fades and tapers for kids and teens.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-neutral-400">Gentle Trimmer Finish</span>
+            <button onclick="openBookingModal('Young Gentleman\'s Cut (12 & Under)')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+        <!-- VIP & After Hours -->
+        <div class="service-item bg-[#1C1C1C] border border-[#2B2B2B] rounded-xl p-6 flex flex-col justify-between" data-category="vip-afterhours">
+          <div>
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-heading text-lg font-bold text-white uppercase">After-Hours Executive Cut</h3>
+              <span class="text-2xl font-black font-heading text-[#D97706]">$65.00</span>
+            </div>
+            <span class="text-xs text-neutral-400 block mb-3">⏱ 50 mins • Private Lounge Access</span>
+            <p class="text-xs text-neutral-300 font-light leading-relaxed mb-5">Private salon access before 9 AM or after 6 PM. Includes complimentary beverage and private master barber attention.</p>
+          </div>
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between">
+            <span class="text-[11px] text-emerald-400 font-medium">✓ Razor Finish Included</span>
+            <button onclick="openBookingModal('After-Hours Executive Cut')" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-3 py-1.5 rounded">Book Cut</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lounge Experience & Amenities Section -->
+  <section id="experience" class="py-16 bg-[#161616] border-b border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-[0.25em] text-[#DC2626] mb-1 block">Lounge Comfort</span>
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold uppercase text-white mb-3">
+          The Westbound Experience
+        </h2>
+        <p class="text-neutral-400 text-sm">Upscale modern luxury meets authentic barbershop culture in Henry County.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div class="bg-[#1C1C1C] border border-[#2C2C2C] rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-[#262626] flex items-center justify-center text-[#D97706] text-xl mb-4">🛋️</div>
+          <h3 class="font-heading text-lg font-bold uppercase text-white mb-2">Comfortable Leather Seating</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">Relax in vintage tufted leather barber chairs and lounge sofas with HDTV sports and complimentary beverages.</p>
+        </div>
+
+        <div class="bg-[#1C1C1C] border border-[#2C2C2C] rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-[#262626] flex items-center justify-center text-[#DC2626] text-xl mb-4">✂️</div>
+          <h3 class="font-heading text-lg font-bold uppercase text-white mb-2">Experienced Master Barbers</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">Licensed veterans with over 15+ years of precision scissor-over-comb, skin fades, and straight-razor skill.</p>
+        </div>
+
+        <div class="bg-[#1C1C1C] border border-[#2C2C2C] rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-[#262626] flex items-center justify-center text-[#D97706] text-xl mb-4">👪</div>
+          <h3 class="font-heading text-lg font-bold uppercase text-white mb-2">Child-Friendly Environment</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">A respectful, family-oriented lounge welcoming boys of all ages with patience and positive confidence.</p>
+        </div>
+
+        <div class="bg-[#1C1C1C] border border-[#2C2C2C] rounded-xl p-6">
+          <div class="w-10 h-10 rounded-lg bg-[#262626] flex items-center justify-center text-[#DC2626] text-xl mb-4">🌙</div>
+          <h3 class="font-heading text-lg font-bold uppercase text-white mb-2">After-Hours Availability</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">Early mornings and evening appointments past 6:00 PM available by direct request for busy executives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact Section -->
+  <section id="location" class="py-16 bg-[#121212] border-b border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-heading text-3xl sm:text-5xl font-extrabold uppercase text-white mb-2">
+          Location & Hours
+        </h2>
+        <p class="text-neutral-400 text-sm">4340 N Henry Blvd, Suite 240, Stockbridge, GA 30281</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Coordinates & Details -->
+        <div class="lg:col-span-5 bg-[#1A1A1A] border border-[#2C2C2C] rounded-2xl p-7 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div>
+              <span class="text-xs uppercase font-bold text-neutral-400 block mb-1">Address</span>
+              <p class="text-lg font-semibold text-white">4340 N Henry Blvd, Suite 240<br>Stockbridge, GA 30281</p>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=4340%20N%20Henry%20Blvd%20Suite%20240,%20Stockbridge,%20GA%2030281" target="_blank" class="inline-block text-xs font-bold text-[#D97706] hover:underline mt-2 uppercase">
+                ➤ Open in Maps (Directions)
+              </a>
+            </div>
+
+            <div class="pt-4 border-t border-[#2A2A2A]">
+              <span class="text-xs uppercase font-bold text-neutral-400 block mb-2">Operating Hours</span>
+              <div class="space-y-1.5 text-sm">
+                <div class="flex justify-between text-neutral-200">
+                  <span>Monday – Saturday:</span>
+                  <span class="text-amber-400 font-bold">9:00 AM – 6:00 PM</span>
+                </div>
+                <div class="flex justify-between text-neutral-400">
+                  <span>Sunday:</span>
+                  <span>Closed (VIP Slots By Request)</span>
+                </div>
+              </div>
+              <p class="text-xs text-[#DC2626] font-semibold mt-2">⚡ After-Hours Available by Request</p>
+            </div>
+
+            <div class="pt-4 border-t border-[#2A2A2A]">
+              <span class="text-xs uppercase font-bold text-neutral-400 block mb-2">Contact</span>
+              <p class="text-white font-bold text-base">Phone: <a href="tel:6785652887" class="text-[#D97706] hover:underline">(678) 565-2887</a></p>
+              <p class="text-xs text-neutral-400 mt-1">Instagram: <a href="https://www.instagram.com/westboundbarberloungellc" target="_blank" class="text-white hover:underline">@westboundbarberloungellc</a></p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[#2A2A2A]">
+            <button onclick="openBookingModal()" class="w-full gold-gradient text-[#121212] font-heading font-bold text-sm uppercase py-3 rounded-lg shadow-md">
+              Book Your Appointment Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="lg:col-span-7 bg-[#1A1A1A] border border-[#2C2C2C] rounded-2xl overflow-hidden min-h-[380px]">
+          <iframe 
+            src="https://maps.google.com/maps?q=4340%20N%20Henry%20Blvd%20Suite%20240,%20Stockbridge,%20GA%2030281&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            class="w-full h-full min-h-[380px] border-0 grayscale contrast-125 hover:grayscale-0 transition-all duration-300"
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0D0D0D] text-neutral-400 border-t border-[#222222] py-12 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="font-heading text-lg font-bold text-white uppercase">WESTBOUND BARBER LOUNGE & SALON</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs uppercase tracking-wider">
+        <a href="https://www.instagram.com/westboundbarberloungellc" target="_blank" class="text-amber-400 hover:underline">
+          Instagram: @westboundbarberloungellc
+        </a>
+        <span>•</span>
+        <span>Stockbridge, GA 30281</span>
+      </div>
+      <p class="text-xs text-neutral-500">
+        © <span id="year">2026</span> Westbound Barber Lounge LLC. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#181818] border border-[#333333] rounded-2xl w-full max-w-lg text-white shadow-2xl overflow-hidden">
+      <!-- Modal Header -->
+      <div class="bg-[#202020] px-6 py-4 border-b border-[#2C2C2C] flex items-center justify-between">
+        <div>
+          <h3 class="font-heading text-lg font-bold uppercase text-white">Book Appointment</h3>
+          <p class="text-[11px] text-[#D97706] font-semibold">Westbound Barber Lounge • Stockbridge, GA</p>
+        </div>
+        <button onclick="closeBookingModal()" class="text-neutral-400 hover:text-white text-xl">✕</button>
+      </div>
+
+      <!-- Form View -->
+      <div id="bookingFormContainer" class="p-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Select Service</label>
+          <select id="modalServiceSelect" class="w-full bg-[#121212] border border-[#333333] text-white text-sm rounded-lg p-2.5 outline-none">
+            <option value="The Westbound Signature Fade">The Westbound Signature Fade — $35.00 (45 mins)</option>
+            <option value="The Royal Hot Towel Shave">The Royal Hot Towel Shave — $35.00 (40 mins)</option>
+            <option value="Cut + Beard Sculpt Combo (VIP)">Cut + Beard Sculpt Combo — $55.00 (60 mins)</option>
+            <option value="Classic Gentleman's Taper & Cut">Classic Gentleman's Taper — $30.00 (40 mins)</option>
+            <option value="Young Gentleman's Cut (12 & Under)">Young Gentleman's Cut — $22.00 (30 mins)</option>
+            <option value="After-Hours Executive Cut">After-Hours Executive Cut — $65.00 (50 mins)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Date</label>
+            <input type="date" id="bookingDate" class="w-full bg-[#121212] border border-[#333333] text-white text-xs rounded-lg p-2.5 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Time</label>
+            <select id="bookingTime" class="w-full bg-[#121212] border border-[#333333] text-white text-xs rounded-lg p-2.5 outline-none">
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:30 PM</option>
+              <option>2:30 PM</option>
+              <option>3:30 PM</option>
+              <option>4:30 PM</option>
+              <option>5:30 PM</option>
+              <option>6:15 PM (After-Hours)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Full Name *</label>
+            <input type="text" id="clientName" placeholder="Your Name" required class="w-full bg-[#121212] border border-[#333333] text-white text-xs rounded-lg p-2.5 outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Phone *</label>
+            <input type="tel" id="clientPhone" placeholder="(678) 000-0000" required class="w-full bg-[#121212] border border-[#333333] text-white text-xs rounded-lg p-2.5 outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-neutral-300 mb-1">Notes / Barber Preference (Optional)</label>
+          <input type="text" id="clientNotes" placeholder="e.g. skin taper, keep beard length" class="w-full bg-[#121212] border border-[#333333] text-white text-xs rounded-lg p-2.5 outline-none" />
+        </div>
+
+        <button onclick="submitBooking()" class="w-full gold-gradient text-[#121212] font-heading font-bold text-sm uppercase py-3 rounded-lg shadow-lg">
+          Confirm Reservation
+        </button>
+      </div>
+
+      <!-- Confirmation View -->
+      <div id="confirmationView" class="hidden p-8 text-center">
+        <div class="w-14 h-14 rounded-full bg-emerald-950 border border-emerald-500 text-emerald-400 flex items-center justify-center mx-auto mb-3 text-2xl">
+          ✓
+        </div>
+        <h4 class="font-heading text-2xl font-bold uppercase text-white mb-2">Chair Reserved!</h4>
+        <p class="text-xs text-neutral-300 mb-4" id="confirmationText">Your appointment has been registered.</p>
+        <div class="bg-[#121212] p-4 rounded-lg text-left text-xs space-y-1.5 mb-5 text-neutral-300">
+          <div><strong class="text-white">Location:</strong> 4340 N Henry Blvd, Suite 240, Stockbridge</div>
+          <div><strong class="text-white">Shop Phone:</strong> (678) 565-2887</div>
+        </div>
+        <button onclick="closeBookingModal()" class="gold-gradient text-[#121212] font-heading font-bold text-xs uppercase px-6 py-2.5 rounded">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vanilla JavaScript Logic -->
+  <script>
+    // Set Year and Default Date
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('bookingDate').value = today;
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Tab Filter
+    function filterCategory(cat, btnElement) {
+      const buttons = document.querySelectorAll('.category-btn');
+      buttons.forEach(b => {
+        b.className = 'category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#202020] text-neutral-300 hover:text-white';
+      });
+      btnElement.className = 'category-btn px-4 py-2 rounded-lg text-xs font-heading font-bold uppercase tracking-wider bg-[#DC2626] text-white';
+
+      const items = document.querySelectorAll('.service-item');
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Control
+    function openBookingModal(serviceName) {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.getElementById('bookingFormContainer').classList.remove('hidden');
+      document.getElementById('confirmationView').classList.add('hidden');
+
+      if (serviceName) {
+        const select = document.getElementById('modalServiceSelect');
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].text.toLowerCase().includes(serviceName.toLowerCase())) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+
+    function closeBookingModal() {
+      const modal = document.getElementById('bookingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Booking Submission
+    function submitBooking() {
+      const name = document.getElementById('clientName').value;
+      const phone = document.getElementById('clientPhone').value;
+      if (!name || !phone) {
+        alert('Please provide your full name and phone number to reserve your appointment.');
+        return;
+      }
+      const service = document.getElementById('modalServiceSelect').value;
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+
+      document.getElementById('confirmationText').innerHTML = 
+        `Thank you <strong>${name}</strong>! Your <strong>${service}</strong> is scheduled for <strong>${date}</strong> at <strong>${time}</strong>.`;
+      
+      document.getElementById('bookingFormContainer').classList.add('hidden');
+      document.getElementById('confirmationView').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

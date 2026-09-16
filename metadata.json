@@ -1,0 +1,6 @@
+{
+  "name": "Westbound Barber Lounge & Salon",
+  "description": "Stockbridge's premier upscale barbershop and salon lounge offering precision cuts, beard sculpts, and VIP grooming.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
